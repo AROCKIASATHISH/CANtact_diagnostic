@@ -1,0 +1,64 @@
+/*  if(strstr(usb_rx_buff ,"[C")) {
+                        count = 1;
+			for (i = 0; i < 14; i++) {
+			if(i==1)
+				TUI_color_set();
+			if(i!=1)
+				TUI_color_notset();
+				CDC_Transmit_FS(menu[i] , strlen(menu[i]));
+				CDC_Transmit_FS("\n\r" , 2);
+			}
+			for(i=0;i<21;i++){
+				TUI_move_backward();
+			}
+			TUI_init_position(13);
+			for(i=0; i< 10; i++){
+				usb_rx_buff[i] = 0 ;
+			}
+                }
+
+
+
+                if(strstr(usb_rx_buff ,"[B")) {
+		        count++;
+			if(count!=14){
+			 TUI_set_position(DOWN,1,menu,count-1);
+			}else{
+			 TUI_set_position(UP,12,menu,count);
+			count=1;
+			}
+                      for(i=0; i< 10; i++){
+		        usb_rx_buff[i] = 0 ;
+                      }
+                }
+
+                if(strstr(usb_rx_buff ,"[A")) {
+		        count--;
+			if(count!=0){
+			 TUI_set_position(UP,1,menu,count+1);
+			}
+			else{
+			 TUI_set_position(DOWN,12,menu,count);
+			count=13;
+			}
+                    for(i=0; i< 10; i++){
+		    usb_rx_buff[i] = 0 ;
+                    }
+                }
+
+                if(usb_rx_buff[0]=='\r') {
+                   //TUI_menu_process(count,menu);
+                    for(i=0; i< 10; i++){
+		    usb_rx_buff[i] = 0 ;
+                   }
+                   test_no = count;
+                   //TUI_menu_process(test_no ,menu);
+                 if(test_no == 11)
+                       count = 1;
+                 }
+
+                 mfg_diag_actions(test_no);  
+                if(auto_diag_enable == 1) {
+                    auto_diag();
+                }  */
+
